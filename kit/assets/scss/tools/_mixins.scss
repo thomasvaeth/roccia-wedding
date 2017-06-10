@@ -104,3 +104,49 @@
     }
   }
 }
+
+//---------------------------------------------- 
+//  Link Underline - link-underline();
+//  @description: Draw link underline from center on hover using pseudo element
+//  @param:       $mainColor:  [$color-alpha] - Text color
+//  @param:       $underColor: [$color-alpha] - Underline color
+//----------------------------------------------
+@mixin link-underline($mainColor: $color-alpha, $underColor: $color-alpha) {
+  position: relative;
+
+  color: $mainColor;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: $mainColor;
+
+    &:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+
+  &:focus {
+    color: $mainColor;
+
+    &:before {
+      background-color: darken($underColor, 10);
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -0.125em;
+    left: 0;
+
+    height: 1px;
+    width: 100%;
+    
+    background-color: $underColor;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+}

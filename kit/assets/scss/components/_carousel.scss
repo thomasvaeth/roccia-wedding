@@ -1,0 +1,118 @@
+//----------------------------------------------
+// Carousel
+//---------------------------------------------- 
+.carousel {
+  @extend .section-padding;
+
+  padding: {
+    right: 0;
+    left: 0;
+  }
+
+  &__img {
+    position: relative;
+
+    height: 14em;
+
+    @media (min-width: $mq-small) {
+      height: 26em;
+    }
+
+    @media (min-width: $mq-med) {
+      height: 34em;
+    }
+
+    @media (min-width: $mq-xlarge) {
+      height: 38em;
+    }
+  }
+}
+
+//----------------------------------------------
+// Owl Carousel
+//---------------------------------------------- 
+.owl-dots {
+  position: absolute;
+  left: 0;
+  bottom: 1em;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  & > *:not(:last-child) {
+    margin-right: 0.5em;
+  }
+}
+
+.owl-dot {
+
+  span {
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    background: $color-white;
+    border-radius: 100%;
+    transition: background 0.2s ease-in-out;
+  }
+
+  // &.active {
+
+  //   span {
+  //     background: ;
+  //   }
+  // }
+}
+
+.owl-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  height: 100%;
+  width: 100%;
+
+  @media (min-width: $mq-med) {
+    display: flex;
+  }
+}
+
+.owl-prev,
+.owl-next {
+  position: relative;
+
+  flex-basis: 50%;
+  max-width: 50%;
+
+  img {
+    position: absolute;
+    top: 50%;
+    z-index: $z-1;
+
+    width: 2em;
+
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+}
+
+.owl-carousel .owl-nav {
+
+  .owl-prev {
+    cursor: w-resize;
+
+    img {
+      left: 0.75em;
+    }
+  }
+
+  .owl-next {
+    cursor: e-resize;
+
+    img {
+      right: 0.75em;
+    }
+  }
+}

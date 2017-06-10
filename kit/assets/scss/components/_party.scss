@@ -1,0 +1,65 @@
+//----------------------------------------------
+// Party
+//----------------------------------------------
+.party {
+
+  &__container {
+    @extend .map__container;
+  }
+
+  &__subcontainer {
+    
+    @media (min-width: $mq-med) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    @extend %text-center;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5em;
+    }
+
+    span {
+      display: block;
+
+      &:first-child {
+        font-size: 1.5em;
+      }
+
+      &:last-child {
+        font-family: $font-header;
+        font-size: $font-xxxsmall;
+        color: $color-alpha;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+    }
+
+    &--couple {
+      @extend .party__item;
+
+      span {
+
+        &:first-child {
+          margin-bottom: 0.125em;
+
+          font-size: 2.5em;
+          font-style: italic;
+          line-height: 1;
+        }
+
+        &:last-child {
+          font-size: $font-small;
+          letter-spacing: 0.4em;
+        }
+      }
+    }
+  }
+}

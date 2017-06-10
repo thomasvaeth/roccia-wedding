@@ -1,0 +1,26 @@
+//----------------------------------------------
+// Story
+//----------------------------------------------
+.story {
+
+  p {
+    font-size: 1.1em;
+  }
+
+  &__container {
+    margin-top: 3em;
+  }
+  
+  &__subcontainer {
+    margin-top: 2em;
+  }
+
+  &__columns {
+    column-count: 2;
+    column-gap: 2em;
+  }
+
+  &__content {
+    margin-top: 1em;
+  }
+}

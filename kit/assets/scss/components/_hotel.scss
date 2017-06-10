@@ -1,0 +1,27 @@
+//----------------------------------------------
+// Hotel
+//----------------------------------------------
+.hotel {
+
+  &__container {
+    @extend .map__container;
+  }
+
+  &__subcontainer {
+    @extend .map__subcontainer;
+
+    position: relative;
+  }
+
+  &__content {
+    @extend .map__content;
+  }
+
+  &__address {
+    @extend .map__address;
+  }
+
+  // &__directions {
+  //   @include link-underline();
+  // }
+}

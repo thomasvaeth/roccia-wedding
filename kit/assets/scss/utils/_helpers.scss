@@ -1,0 +1,109 @@
+//-------------------------------------------- 
+// Background Colors
+//--------------------------------------------
+.bg-alpha {
+  background-color: $color-alpha;
+}
+
+.bg-white {
+  background-color: $color-white;
+}
+
+//-------------------------------------------- 
+// Sections
+//--------------------------------------------
+section {
+  position: relative;
+}
+
+.section-padding {
+  padding: 2em 1em;
+
+  @media (min-width: $mq-small) {
+    padding: {
+      top: 4em;
+      bottom: 4em;
+    }
+  }
+
+  @media (min-width: $mq-xlarge) {
+    padding: {
+      top: 6em;
+      bottom: 6em;
+    }
+  }
+}
+
+// .section-padding--no-top {
+//   padding: {
+//     right: 1em;
+//     bottom: 2em;
+//     left: 1em;
+//   }
+
+//   @media (min-width: $mq-small) {
+//     padding: {
+//       bottom: 4em;
+//     }
+//   }
+
+//   @media (min-width: $mq-xlarge) {
+//     padding-bottom: 6em;
+//   }
+// }
+
+// .section-padding--no-bottom {
+//   padding: {
+//     top: 2em;
+//     right: 1em;
+//     left: 1em;
+//   }
+
+//   @media (min-width: $mq-small) {
+//     padding: {
+//       top: 4em;
+//     }
+//   }
+
+//   @media (min-width: $mq-xlarge) {
+//     padding-top: 6em;
+//   }
+// }
+
+// .section-padding--none {
+//   padding: {
+//     right: 1em;
+//     left: 1em;
+//   }
+// }
+
+//-------------------------------------------- 
+// Grid
+//--------------------------------------------
+.grid {
+  @extend %auto-margin;
+
+  max-width: $max-width;
+
+  @media (min-width: $mq-med) {
+    width: 65%;
+  }
+
+  @media (min-width: $mq-xlarge) {
+    width: 50%;
+  }
+}
+
+.grid-large {
+  @extend %auto-margin;
+
+  max-width: $max-width--lg;
+
+  @media (min-width: $mq-med) {
+    width: 80%;
+  }
+
+  @media (min-width: $mq-xlarge) {
+    width: 65%;
+  }
+}

@@ -5,8 +5,8 @@ body {
   font-family: $font-body;
   font-weight: 400;
   line-height: $base-lineheight;
-  color: $color-beta;
-  background-color: $color-alpha;
+  color: $color-black;
+  background-color: $color-white;
 }
 
 //----------------------------------------------
@@ -42,7 +42,20 @@ body {
 // Headers
 //---------------------------------------------- 
 h1, h2, h3, h4, h5, h6 {
-  // @extend %black-spacing;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+}
+
+h1, h2, h3 {
+  font-family: $font-header;
+  font-weight: 700;
+}
+
+h4, h5, h6 {
+  font-family: $font-body;
+  font-weight: 600;
 }
 
 //----------------------------------------------
@@ -71,21 +84,21 @@ h1, %font-h1 {
 // H2 theme
 //---------------------------------------------- 
 h2, %font-h2 {
-  $fontSize: 2.25em;
+  $fontSize: $font-xxsmall;
+  
+  @extend %text-center;
 
-  font-size: $fontSize - 0.25em; 
+  font-size: $fontSize - 0.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em; 
   line-height: 1.4;
 
-  @media (min-width: $mq-small) {
+  @media (min-width: $mq-med) {
     font-size: $fontSize;
   }
 
-  @media (min-width: $mq-med) {
-    font-size: $fontSize + 0.25em;  
-  }
-
   @media (min-width: $mq-xlarge) {
-    font-size: $fontSize + 0.5em;
+    font-size: $fontSize + 0.1em;
   }
 }
 
@@ -93,9 +106,13 @@ h2, %font-h2 {
 // H3 theme
 //---------------------------------------------- 
 h3, %font-h3 {
-  $fontSize: 1.25em;
+  $fontSize: $font-xxsmall;
   
-  font-size: $fontSize - 0.15em; 
+  @extend %text-center;
+
+  font-size: $fontSize - 0.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em; 
   line-height: 1.4;
 
   @media (min-width: $mq-med) {
@@ -103,7 +120,7 @@ h3, %font-h3 {
   }
 
   @media (min-width: $mq-xlarge) {
-    font-size: $fontSize + 0.25em;
+    font-size: $fontSize + 0.1em;
   }
 }
 
@@ -111,32 +128,12 @@ h3, %font-h3 {
 // H4 theme
 //---------------------------------------------- 
 h4, %font-h4 {
-  $fontSize: 1.25em; 
+  @extend %text-center;
+
+  margin-bottom: 0.5em;
   
-  font-size: $fontSize;
-  line-height: 1.2;
-
-  @media (min-width: $mq-med) {
-    font-size: $fontSize + 0.25em;  
-  }
-
-  @media (min-width: $mq-xlarge) {
-   font-size: $fontSize + 0.5em;
-  }
-}
-
-//----------------------------------------------
-// H5 theme
-//---------------------------------------------- 
-h5, %font-h5 {
-  $fontSize: 1em;
-  
-  font-size: $fontSize;  
-  line-height: 1.2;
-
-  @media (min-width: $mq-xlarge) {
-   font-size: $fontSize + 0.1em;
-  }
+  font-size: 1.25em;
+  line-height: 1.4;
 }
 
 //----------------------------------------------
@@ -145,17 +142,6 @@ h5, %font-h5 {
 p {
   margin-top: 0;
   margin-bottom: 0.75em;
-}
-
-small {
-  display: block;
-  margin-bottom: 1em;
-
-  font-size: $font-xsmall;
-}
-
-b, strong {
-  font-weight: 700;
 }
 
 //----------------------------------------------
@@ -189,10 +175,22 @@ b, strong {
 // }
 
 //----------------------------------------------
+// Misc
+//---------------------------------------------- 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+//----------------------------------------------
 // Selection
 //---------------------------------------------- 
 ::selection {
   color: $color-white;
-  background: $color-beta;
+  background: $color-alpha;
   text-shadow: none;
 }

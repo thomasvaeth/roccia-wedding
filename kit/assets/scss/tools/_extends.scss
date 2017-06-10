@@ -1,15 +1,24 @@
 //----------------------------------------------
-// Vendor
+// Auto Margin
 //---------------------------------------------- 
-// @codekit-append "vendor/_owl.js"
-// @codekit-append "vendor/_wow.js"
+%auto-margin {
+  margin: {
+    right: auto;
+    left: auto;
+  }
+}
 
 //----------------------------------------------
-// Components
+// Letter Spacing
 //---------------------------------------------- 
-// @codekit-append "components/_map.js"
+%letter-spacing {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
 
 //----------------------------------------------
-// Inits
+// Text Center
 //---------------------------------------------- 
-// @codekit-append "_inits.js"
+%text-center {
+  text-align: center;
+}

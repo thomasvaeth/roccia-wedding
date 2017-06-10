@@ -1,0 +1,83 @@
+//----------------------------------------------
+// Map
+//----------------------------------------------
+.map {
+
+  &__container {
+    margin-top: 3em;
+
+    @media (min-width: $mq-med) {
+      display: flex;
+    }
+  }
+
+  &__subcontainer {
+
+    @media (min-width: $mq-med) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    &:first-child {
+
+      @media (min-width: $mq-med) {
+        margin-right: 0.5em;
+      }
+    }
+
+    &:last-child {
+
+      @media (min-width: $mq-med) {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  &__content {
+    @extend %text-center;
+
+    margin-top: 3em;
+  }
+
+  &__address {
+    margin: {
+      top: 1em;
+      bottom: 0.5em;
+    }
+
+    & > * {
+      display: block;
+
+      &:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__directions {
+    @include link-underline();
+  }
+}
+
+//----------------------------------------------
+// Google Map
+//----------------------------------------------
+.js-map {
+  height: 20em;
+
+  @media (min-width: $mq-small) {
+    height: 24em;
+  }
+
+  @media (min-width: $mq-med) {
+    height: 30em;
+  }
+}
+
+.js-address {
+  visibility: hidden;
+}
+
+.gm-style-cc {
+  display: none;
+}
