@@ -4,6 +4,8 @@
 .mast {
   position: relative;
 
+  // display: flex;
+  // align-items: center;
   height: 26em;
   width: 100%;
 
@@ -12,9 +14,61 @@
   }
 
   .absolute-bg {
+    opacity: 0.9;
 
     @media (min-width: $mq-small) {
       background-attachment: fixed;
+    }
+  }
+
+  &__container {
+    @extend %text-center;
+
+    position: absolute;
+    top: 50%;
+    z-index: $z-9;
+
+    color: $color-white;
+    transform: translateY(-50%);
+
+    @media (min-width: $mq-small) {
+      left: 5%;
+
+      text-align: left;
+    }
+
+    @media (min-width: $mq-large) {
+      left: 10%;
+    }
+
+    br {
+
+      @media (max-width: $mq-xsmall) {
+        display: none;
+      }
+    }
+  }
+
+  &__date {
+    @extend %text-center;
+    @extend %letter-spacing;
+
+    display: block;
+    margin-top: 0.5em;
+
+    font-family: $font-header;
+    font-size: 1.25em;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 1em;
+
+    transform: translateX(-50%);
+
+    img {
+      width: 2em;
     }
   }
 }

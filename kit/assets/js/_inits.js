@@ -1,4 +1,9 @@
 $(function() {
+  // Countdown
+  // $('.mast__countdown').countdown('2018/05/20', function(e) {
+  //   $(this).html(e.strftime('%-D days'));
+  // });
+
   // Owl Carousel
   $('.carousel__container').owlCarousel({
     items: 1,
@@ -24,6 +29,12 @@ $(function() {
     }
   });
 
+  // Wow
+  var wow = new WOW({
+    boxClass: 'js-wow'
+  });
+
   // Inits
   Map.init();
+  wow.init();
 });
