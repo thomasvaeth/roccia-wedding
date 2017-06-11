@@ -54,6 +54,13 @@
     }
   }
 
+  &__time {
+    display: block;
+    margin-bottom: 0.5em;
+
+    font-weight: 600;
+  }
+
   &__directions {
     @include link-underline();
   }

@@ -2,11 +2,23 @@
 // Carousel
 //---------------------------------------------- 
 .carousel {
-  @extend .section-padding;
-
   padding: {
-    right: 0;
-    left: 0;
+    top: 2em;
+    bottom: 2em;
+  }
+
+  @media (min-width: $mq-small) {
+    padding: {
+      top: 4em;
+      bottom: 4em;
+    }
+  }
+
+  @media (min-width: $mq-xlarge) {
+    padding: {
+      top: 6em;
+      bottom: 6em;
+    }
   }
 
   &__img {

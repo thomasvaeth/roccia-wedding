@@ -114,6 +114,7 @@
 @mixin link-underline($mainColor: $color-alpha, $underColor: $color-alpha) {
   position: relative;
 
+  font-style: italic;
   color: $mainColor;
   text-decoration: none;
 

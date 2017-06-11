@@ -3,7 +3,7 @@
 //----------------------------------------------
 .story {
 
-  p {
+  p:not(.story__intro) {
     font-size: 1.1em;
   }
 
@@ -15,12 +15,14 @@
     margin-top: 2em;
   }
 
-  &__columns {
-    column-count: 2;
-    column-gap: 2em;
+  &__intro {
+    margin-bottom: 0.5em;
+
+    font-size: 1.5em;
   }
 
+
   &__content {
-    margin-top: 1em;
+    @extend .story__subcontainer;
   }
 }

@@ -1,0 +1,23 @@
+//----------------------------------------------
+// Instagram
+//----------------------------------------------
+.instagram {
+
+  &__text {
+    @extend %auto-margin;
+    @extend %text-center;
+
+    width: 50%;
+    margin-bottom: 0;
+
+    font-family: $font-header;
+    font-size: 1.1em;
+  }
+
+  &__img {
+    @extend %auto-margin;
+
+    max-width: $mq-xsmall;
+    margin-top: 2em;
+  }
+}

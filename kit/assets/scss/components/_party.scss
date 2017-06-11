@@ -17,6 +17,13 @@
 
   &__list {
     list-style-type: none;
+
+    &--other {
+      @include flex-grid(1, 2, 4);
+      @extend .party__list;
+
+      width: 100%;
+    }
   }
 
   &__item {
@@ -24,6 +31,10 @@
 
     &:not(:last-child) {
       margin-bottom: 1.5em;
+
+      .party__list--other & {
+        margin-bottom: 0;
+      }
     }
 
     span {

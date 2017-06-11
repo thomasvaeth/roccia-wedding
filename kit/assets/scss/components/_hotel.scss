@@ -15,13 +15,19 @@
 
   &__content {
     @extend .map__content;
+
+    margin-bottom: 2em;
   }
 
   &__address {
     @extend .map__address;
   }
 
-  // &__directions {
-  //   @include link-underline();
+  // &__info {
+  //   @extend %auto-margin; 
+  //   width: 75%;
+  //   margin-bottom: 0;
+
+  //   font-style: italic;
   // }
 }
