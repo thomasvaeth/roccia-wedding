@@ -11,12 +11,21 @@
     @extend .map__subcontainer;
 
     position: relative;
+
+    &:first-child {
+
+      @media (max-width: $mq-small) {
+        height: 30em;
+      }
+    }
   }
 
   &__content {
     @extend .map__content;
 
-    margin-bottom: 2em;
+    @media (min-width: $mq-small) {
+      margin-bottom: 2em;
+    }
   }
 
   &__address {

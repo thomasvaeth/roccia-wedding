@@ -4,10 +4,17 @@
 .mast {
   position: relative;
 
-  height: 100vh;
+  height: 26em;
   width: 100%;
 
+  @media (min-width: $mq-small) {
+    height: 100vh;
+  }
+
   .absolute-bg {
-    background-attachment: fixed;
+
+    @media (min-width: $mq-small) {
+      background-attachment: fixed;
+    }
   }
 }

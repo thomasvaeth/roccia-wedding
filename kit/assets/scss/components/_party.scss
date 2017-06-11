@@ -4,14 +4,25 @@
 .party {
 
   &__container {
-    @extend .map__container;
+    @extend %container-margin;
+
+    @media (min-width: $mq-small) {
+      display: flex;
+    }
   }
 
   &__subcontainer {
     
-    @media (min-width: $mq-med) {
+    @media (min-width: $mq-small) {
       flex-basis: 50%;
       max-width: 50%;
+    }
+
+    &:last-child {
+
+      @media (max-width: $mq-small) {
+        margin-top: 2em;
+      }
     }
   }
 
@@ -19,7 +30,7 @@
     list-style-type: none;
 
     &--other {
-      @include flex-grid(1, 2, 4);
+      @include flex-grid(2, 4, 4);
       @extend .party__list;
 
       width: 100%;
@@ -30,10 +41,21 @@
     @extend %text-center;
 
     &:not(:last-child) {
-      margin-bottom: 1.5em;
+      margin-bottom: 1em;
+
+      @media (min-width: $mq-med) {
+        margin-bottom: 1.5em;
+      }
 
       .party__list--other & {
         margin-bottom: 0;
+
+        &:nth-child(-n+2) {
+
+          @media (max-width: $mq-small) {
+            margin-bottom: 1em;
+          }
+        }
       }
     }
 

@@ -4,39 +4,42 @@
 .map {
 
   &__container {
-    margin-top: 3em;
+    @extend %container-margin;
 
-    @media (min-width: $mq-med) {
+    @media (min-width: $mq-small) {
       display: flex;
     }
   }
 
   &__subcontainer {
 
-    @media (min-width: $mq-med) {
+    @media (min-width: $mq-small) {
       flex-basis: 50%;
       max-width: 50%;
     }
 
     &:first-child {
 
-      @media (min-width: $mq-med) {
+      @media (min-width: $mq-small) {
         margin-right: 0.5em;
       }
     }
 
     &:last-child {
+      margin-top: 2em;
 
-      @media (min-width: $mq-med) {
-        margin-left: 0.5em;
+      @media (min-width: $mq-small) {
+        margin: {
+          top: 0;
+          left: 0.5em;
+        }
       }
     }
   }
 
   &__content {
+    @extend %container-margin;
     @extend %text-center;
-
-    margin-top: 3em;
   }
 
   &__address {

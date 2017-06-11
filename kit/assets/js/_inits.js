@@ -3,27 +3,23 @@ $(function() {
   $('.carousel__container').owlCarousel({
     items: 1,
     loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
     nav: true,
     navText: [
       '<img src="http://dev.rocciawedding.com/assets/images/carousel/arrow-left.png" alt="Previous"/>', 
       '<img src="http://dev.rocciawedding.com/assets/images/carousel/arrow-right.png" alt="Next"/>'
     ],
+    dots: false,
     responsive: {
       512: {
-        mouseDrag: false,
-        touchDrag: false,
-        pullDrag: false,
         margin: 10,
-        stagePadding: 80,
-        dots: false
+        stagePadding: 80
       },
-      768: {
-        mouseDrag: false,
-        touchDrag: false,
-        pullDrag: false,
+      992: {
         margin: 20,
-        stagePadding: 160,
-        dots: false
+        stagePadding: 160
       }
     }
   });

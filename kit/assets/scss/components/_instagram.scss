@@ -7,11 +7,14 @@
     @extend %auto-margin;
     @extend %text-center;
 
-    width: 50%;
     margin-bottom: 0;
 
     font-family: $font-header;
     font-size: 1.1em;
+
+    @media (min-width: $mq-small) {
+      width: 50%;
+    }
   }
 
   &__img {
@@ -19,5 +22,9 @@
 
     max-width: $mq-xsmall;
     margin-top: 2em;
+
+    @media (max-width: $mq-small) {
+      width: 90%;
+    }
   }
 }

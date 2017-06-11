@@ -22,3 +22,14 @@
 %text-center {
   text-align: center;
 }
+
+//----------------------------------------------
+// Container Margin
+//---------------------------------------------- 
+%container-margin {
+  margin-top: 2em;
+
+  @media (min-width: $mq-small) {
+    margin-top: 3em;
+  }
+}

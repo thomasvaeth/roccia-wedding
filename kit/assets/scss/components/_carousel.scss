@@ -2,10 +2,12 @@
 // Carousel
 //---------------------------------------------- 
 .carousel {
-  padding: {
-    top: 2em;
-    bottom: 2em;
-  }
+  padding: 2em 1em;
+  
+  // padding: {
+  //   top: 2em;
+  //   bottom: 2em;
+  // }
 
   @media (min-width: $mq-small) {
     padding: {
@@ -43,52 +45,48 @@
 //----------------------------------------------
 // Owl Carousel
 //---------------------------------------------- 
-.owl-dots {
-  position: absolute;
-  left: 0;
-  bottom: 1em;
+// .owl-dots {
+//   position: absolute;
+//   left: 0;
+//   bottom: 1em;
 
-  display: flex;
-  justify-content: center;
-  width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
 
-  & > *:not(:last-child) {
-    margin-right: 0.5em;
-  }
-}
+//   & > *:not(:last-child) {
+//     margin-right: 0.5em;
+//   }
+// }
 
-.owl-dot {
+// .owl-dot {
 
-  span {
-    display: block;
-    width: 10px;
-    height: 10px;
+//   span {
+//     display: block;
+//     width: 10px;
+//     height: 10px;
 
-    background: $color-white;
-    border-radius: 100%;
-    transition: background 0.2s ease-in-out;
-  }
+//     background: $color-white;
+//     border-radius: 100%;
+//     transition: background 0.2s ease-in-out;
+//   }
 
-  // &.active {
+//   &.active {
 
-  //   span {
-  //     background: ;
-  //   }
-  // }
-}
+//     span {
+//       background: ;
+//     }
+//   }
+// }
 
 .owl-nav {
   position: absolute;
   top: 0;
   left: 0;
 
-  display: none;
+  display: flex;
   height: 100%;
   width: 100%;
-
-  @media (min-width: $mq-med) {
-    display: flex;
-  }
 }
 
 .owl-prev,
@@ -103,10 +101,14 @@
     top: 50%;
     z-index: $z-1;
 
-    width: 2em;
+    width: 1em;
 
     cursor: pointer;
     transform: translateY(-50%);
+
+    @media (min-width: $mq-small) {
+      width: 2em;
+    }
   }
 }
 
@@ -116,7 +118,11 @@
     cursor: w-resize;
 
     img {
-      left: 0.75em;
+      left: 0.5em;
+
+      @media (min-width: $mq-small) {
+        left: 1em;
+      }
     }
   }
 
@@ -124,7 +130,11 @@
     cursor: e-resize;
 
     img {
-      right: 0.75em;
+      right: 0.5em;
+
+      @media (min-width: $mq-small) {
+        right: 1em;
+      }
     }
   }
 }

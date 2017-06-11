@@ -1,0 +1,62 @@
+//----------------------------------------------
+// Border
+//---------------------------------------------- 
+$border-width: 0.5em;
+
+.border-top,
+.border-right,
+.border-bottom,
+.border-left {
+  position: fixed;
+  z-index: $z-999;
+
+  display: none;
+
+  background-color: $color-alpha;
+
+  @media (min-width: $mq-med) {
+    display: block;
+  }
+}
+
+.border-top,
+.border-bottom {
+  left: 0;
+  right: 0;
+
+  height: $border-width;
+}
+
+.border-right,
+.border-left {
+  top: 0;
+  bottom: 0;
+
+  width: $border-width;
+}
+
+.border-top {
+  top: 0;
+}
+
+.border-right {
+  right: 0;
+}
+
+.border-bottom {
+  bottom: 0;
+}
+
+.border-left {
+  left: 0;
+}
+
+//----------------------------------------------
+// Main
+//---------------------------------------------- 
+main {
+
+  @media (min-width: $mq-med) {
+    margin-bottom: $border-width;
+  }
+}
