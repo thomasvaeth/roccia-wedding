@@ -4,13 +4,13 @@
 .mast {
   position: relative;
 
-  // display: flex;
-  // align-items: center;
   height: 26em;
   width: 100%;
 
   @media (min-width: $mq-small) {
     height: 100vh;
+
+    animation: fade-in ease-in-out 1s both 2s;
   }
 
   .absolute-bg {
