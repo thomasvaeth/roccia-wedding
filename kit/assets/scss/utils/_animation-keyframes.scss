@@ -7,8 +7,26 @@
 }
 
 //----------------------------------------------
+// Fade In Up
+//---------------------------------------------- 
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translate3d(0, 100%, 0); }
+  80% { opacity: 1; }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+//----------------------------------------------
 // Animation Helper
 //---------------------------------------------- 
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
 .fade-in {
-  animation: fade-in ease-in-out 1s both;
+  animation-name: fade-in;
+}
+
+.fade-in-up {
+  animation-name: fade-in-up;
 }

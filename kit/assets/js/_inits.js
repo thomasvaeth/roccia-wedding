@@ -1,9 +1,4 @@
 $(function() {
-  // Countdown
-  // $('.mast__countdown').countdown('2018/05/20', function(e) {
-  //   $(this).html(e.strftime('%-D days'));
-  // });
-
   // Owl Carousel
   $('.carousel__container').owlCarousel({
     items: 1,
@@ -13,8 +8,8 @@ $(function() {
     pullDrag: false,
     nav: true,
     navText: [
-      '<img src="http://dev.rocciawedding.com/assets/images/carousel/arrow-left.png" alt="Previous"/>', 
-      '<img src="http://dev.rocciawedding.com/assets/images/carousel/arrow-right.png" alt="Next"/>'
+      '<img src="http://www.rocciawedding.com/assets/images/carousel/arrow-left.png" alt="Previous"/>', 
+      '<img src="http://www.rocciawedding.com/assets/images/carousel/arrow-right.png" alt="Next"/>'
     ],
     dots: false,
     responsive: {
@@ -31,7 +26,23 @@ $(function() {
 
   // Wow
   var wow = new WOW({
-    boxClass: 'js-wow'
+    boxClass: 'js-wow',
+    mobile: false
+  });
+
+  // Spanizer
+  $('.section-header').each(function() {
+    var arr = $(this).html().split('');
+    var newArr = [];
+    arr.forEach(function(letter) {
+      if (letter !== ' ') {
+        newArr.push('<span class="js-wow fade-in-up">' + letter + '</span>');
+      } else {
+        newArr.push('<span class="js-wow fade-in-up">&nbsp;</span>');
+      }
+    });
+    newArr = newArr.join('');
+    $(this).html(newArr);
   });
 
   // Inits

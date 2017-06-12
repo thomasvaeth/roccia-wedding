@@ -40,25 +40,6 @@
   &__item {
     @extend %text-center;
 
-    &:not(:last-child) {
-      margin-bottom: 1em;
-
-      @media (min-width: $mq-med) {
-        margin-bottom: 1.5em;
-      }
-
-      .party__list--other & {
-        margin-bottom: 0;
-
-        &:nth-child(-n+2) {
-
-          @media (max-width: $mq-small) {
-            margin-bottom: 1em;
-          }
-        }
-      }
-    }
-
     span {
       display: block;
 
@@ -72,6 +53,27 @@
         color: $color-alpha;
         text-transform: uppercase;
         letter-spacing: 0.2em;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+
+      @media (min-width: $mq-med) {
+        margin-bottom: 1.5em;
+      }
+    }
+
+    .party__list--other & {
+      @include nth-animation-delay(4, 0.1s);
+
+      margin-bottom: 0;
+
+      &:nth-child(-n+2) {
+
+        @media (max-width: $mq-small) {
+          margin-bottom: 1em;
+        }
       }
     }
 

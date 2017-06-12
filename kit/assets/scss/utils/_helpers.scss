@@ -60,6 +60,16 @@ section {
   }
 }
 
+.section-header {
+  overflow: hidden;
+
+  span {
+    @include nth-animation-delay();
+
+    display: inline-block;
+  }
+}
+
 //-------------------------------------------- 
 // Grid
 //--------------------------------------------
