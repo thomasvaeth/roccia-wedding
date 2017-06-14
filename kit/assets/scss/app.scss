@@ -24,11 +24,6 @@
 //---------------------------------------------- 
 @import 'tools/_extends';
 
-//----------------------------------------------
-// Vendor: Normalizer
-//---------------------------------------------- 
-@import 'vendor/_normalize';
-
 //----------------------------------------------   
 // Base
 //---------------------------------------------- 
@@ -51,6 +46,7 @@
 //---------------------------------------------- 
 @import 'components/_border';
 @import 'components/_carousel';
+@import 'components/_countdown';
 @import 'components/_hotel';
 @import 'components/_instagram';
 @import 'components/_map';

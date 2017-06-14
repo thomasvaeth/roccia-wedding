@@ -1,0 +1,35 @@
+//----------------------------------------------
+// Countdown
+//---------------------------------------------- 
+.countdown {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: $z-9;
+
+  display: none;
+  width: 4em;
+
+  transform: translateY(-50%);
+
+  @media (min-width: $mq-med) {
+    display: inline-block;
+  }
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    white-space: nowrap;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &__time {
+    @extend %font-h2;
+
+    font-family: $font-header;
+    font-weight: 700;
+    color: $color-black;
+  }
+}

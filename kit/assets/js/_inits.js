@@ -1,4 +1,19 @@
 $(function() {
+  // Countdown
+  var todayDate = new Date(),
+      weddingDate = new Date(2018, 04, 20),
+      day = 24 * 60 * 60 * 1000,
+      diffDays = Math.round((weddingDate.getTime() - todayDate.getTime()) / day),
+      $countdown = $('.countdown__time');
+
+  if (diffDays > 1) {
+    $countdown.text(diffDays + ' Days To Go');
+  } else if (diffDays === 1) {
+    $countdown.text(diffDays + ' Day To Go');
+  } else {
+    $countdown.text('0 Days To Go');
+  }
+
   // Owl Carousel
   $('.carousel__container').owlCarousel({
     items: 1,
@@ -32,8 +47,8 @@ $(function() {
 
   // Spanizer
   $('.section-header').each(function() {
-    var arr = $(this).html().split('');
-    var newArr = [];
+    var arr = $(this).html().split(''),
+        newArr = [];
     arr.forEach(function(letter) {
       if (letter !== ' ') {
         newArr.push('<span class="js-wow fade-in-up">' + letter + '</span>');

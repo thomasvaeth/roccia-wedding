@@ -3,14 +3,20 @@
 //----------------------------------------------
 .mast {
   position: relative;
+  z-index: $z-998;
 
   height: 26em;
   width: 100%;
 
   @media (min-width: $mq-small) {
     height: 100vh;
+  }
 
-    animation: fade-in ease-in-out 1s both 2s;
+  & > * {
+
+    @media (min-width: $mq-small) {
+      animation: fade-in ease-in-out 1s both 2s;
+    }
   }
 
   .absolute-bg {
