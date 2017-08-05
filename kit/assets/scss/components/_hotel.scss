@@ -33,10 +33,15 @@
   }
 
   // &__info {
-  //   @extend %auto-margin; 
+  //   @extend %auto-margin;
+
   //   width: 75%;
   //   margin-bottom: 0;
 
   //   font-style: italic;
   // }
+
+  &__reservation {
+    @include link-underline();
+  }
 }

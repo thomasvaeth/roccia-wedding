@@ -1,0 +1,48 @@
+//----------------------------------------------
+// Registry
+//----------------------------------------------
+.registry {
+
+  &__container {
+    @extend %container-margin;
+    @extend %text-center;
+
+    padding: {
+      top: 2em;
+      bottom: 2em;
+    }
+
+    @media (min-width: $mq-small) {
+      padding: {
+        top: 4em;
+        bottom: 4em;
+      }
+    }
+
+    @media (min-width: $mq-xlarge) {
+      padding: {
+        top: 6em;
+        bottom: 6em;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 15em;
+    max-width: 50%;
+
+    &:hover {
+
+      .registry__img {
+        filter: brightness(0);
+      }
+    }
+  }
+
+  &__img {
+    @extend %auto-margin;
+
+    transition: filter 0.3s ease-in-out;
+  }
+}
