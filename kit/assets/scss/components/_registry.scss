@@ -5,8 +5,11 @@
 
   &__container {
     @extend %container-margin;
-    @extend %text-center;
+    // @extend %text-center;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: {
       top: 2em;
       bottom: 2em;
@@ -32,6 +35,14 @@
     width: 15em;
     max-width: 50%;
 
+    &:first-child {
+      margin-right: 1em;
+    }
+
+    &:last-child {
+      margin-left: 1em;
+    }
+
     &:hover {
 
       .registry__img {
@@ -43,6 +54,7 @@
   &__img {
     @extend %auto-margin;
 
+    filter: brightness(0) invert(1);
     transition: filter 0.3s ease-in-out;
   }
 }
