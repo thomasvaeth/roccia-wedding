@@ -55,11 +55,14 @@ $(function() {
   });
 
   // Inits
+  var rellax = new Rellax('.rellax');
+
   AOS.init({
     duration: 1000,
     easing: 'ease-in-out',
     once: true,
     disable: 'mobile'
   });
+  
   Map.init();
 });

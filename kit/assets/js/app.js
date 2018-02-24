@@ -1,8 +1,9 @@
 //----------------------------------------------
 // Vendor
 //---------------------------------------------- 
-// @codekit-append "vendor/_owl.js"
 // @codekit-append "vendor/_aos.js"
+// @codekit-append "vendor/_owl.js"
+// @codekit-append "vendor/_rellax.js"
 
 //----------------------------------------------
 // Components

@@ -35,44 +35,16 @@
 
 .border-top {
   top: 0;
-
-  animation: transform-top ease-in-out 0.5s both 0s;
 }
 
 .border-right {
   right: 0;
-
-  animation: transform-right ease-in-out 0.5s both 0.5s;
 }
 
 .border-bottom {
   bottom: 0;
-
-  animation: transform-bottom ease-in-out 0.5s both 1s;
 }
 
 .border-left {
   left: 0;
-
-  animation: transform-left ease-in-out 0.5s both 1.5s;
-}
-
-@keyframes transform-top {
-  0% { transform: translate3d(-100%, 0, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-
-@keyframes transform-bottom {
-  0% { transform: translate3d(100%, 0, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-
-@keyframes transform-right {
-  0% { transform: translate3d(0, -100%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-
-@keyframes transform-left {
-  0% { transform: translate3d(0, 100%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
 }

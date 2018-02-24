@@ -11,6 +11,7 @@
   width: 4em;
 
   transform: translateY(-50%);
+  animation: fade-in ease-in-out 1s both 1s;
 
   @media (min-width: $mq-med) {
     display: inline-block;
