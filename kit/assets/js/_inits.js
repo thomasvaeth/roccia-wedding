@@ -45,9 +45,9 @@ $(function() {
         newArr = [];
     arr.forEach(function(letter) {
       if (letter !== ' ') {
-        newArr.push('<span data-aos="fade-in-up">' + letter + '</span>');
+        newArr.push('<span>' + letter + '</span>');
       } else {
-        newArr.push('<span data-aos="fade-in-up">&nbsp;</span>');
+        newArr.push('<span>&nbsp;</span>');
       }
     });
     newArr = newArr.join('');
