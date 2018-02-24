@@ -153,16 +153,16 @@
 }
 
 //---------------------------------------------- 
-//  Animation Delay - nth-animation-delay();
-//  @description: Adds animation delay for each child element
+//  Transition Delay - nth-transition-delay();
+//  @description: Adds transition delay for each child element
 //  @param:       $items: [12]
 //  @param:       $time:  [0.1s]
 //----------------------------------------------
-@mixin nth-animation-delay($items: 20, $time: 0.05s) {
+@mixin nth-transition-delay($items: 18, $time: 0.05s) {
   @for $i from 1 through $items {
     
     &:nth-child(#{$i}) {   
-      animation-delay: $time * $i; 
+      transition-delay: $time * $i; 
     }
   }
 }

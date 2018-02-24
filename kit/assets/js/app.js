@@ -2,7 +2,7 @@
 // Vendor
 //---------------------------------------------- 
 // @codekit-append "vendor/_owl.js"
-// @codekit-append "vendor/_wow.js"
+// @codekit-append "vendor/_aos.js"
 
 //----------------------------------------------
 // Components

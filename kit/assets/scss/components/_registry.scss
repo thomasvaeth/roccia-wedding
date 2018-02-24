@@ -36,11 +36,18 @@
     max-width: 50%;
 
     &:first-child {
-      margin-right: 1em;
+      margin-right: 0.5em;
+
+      @media (min-width: $mq-small) {
+        margin-right: 1em;
+      }
     }
 
     &:last-child {
-      margin-left: 1em;
+
+      @media (min-width: $mq-small) {
+        margin-left: 1em;
+      }
     }
 
     &:hover {

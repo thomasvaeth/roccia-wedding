@@ -39,21 +39,15 @@ $(function() {
     }
   });
 
-  // Wow
-  var wow = new WOW({
-    boxClass: 'js-wow',
-    mobile: false
-  });
-
   // Spanizer
   $('.section-header').each(function() {
     var arr = $(this).html().split(''),
         newArr = [];
     arr.forEach(function(letter) {
       if (letter !== ' ') {
-        newArr.push('<span class="js-wow fade-in-up">' + letter + '</span>');
+        newArr.push('<span data-aos="fade-in-up">' + letter + '</span>');
       } else {
-        newArr.push('<span class="js-wow fade-in-up">&nbsp;</span>');
+        newArr.push('<span data-aos="fade-in-up">&nbsp;</span>');
       }
     });
     newArr = newArr.join('');
@@ -61,6 +55,11 @@ $(function() {
   });
 
   // Inits
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    disable: 'mobile'
+  });
   Map.init();
-  wow.init();
 });

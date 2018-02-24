@@ -65,7 +65,7 @@
     }
 
     .party__list--other & {
-      @include nth-animation-delay(4, 0.1s);
+      @include nth-transition-delay(4, 0.1s);
 
       margin-bottom: 0;
 

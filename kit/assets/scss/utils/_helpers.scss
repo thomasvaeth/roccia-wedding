@@ -68,7 +68,7 @@ section {
   overflow: hidden;
 
   span {
-    @include nth-animation-delay();
+    @include nth-transition-delay();
 
     display: inline-block;
   }

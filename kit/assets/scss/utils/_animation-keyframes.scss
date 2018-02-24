@@ -7,26 +7,53 @@
 }
 
 //----------------------------------------------
-// Fade In Up
+// Animation Helper AOS
 //---------------------------------------------- 
-@keyframes fade-in-up {
-  0% { opacity: 0; transform: translate3d(0, 100%, 0); }
-  80% { opacity: 1; }
-  100% { transform: translate3d(0, 0, 0); }
+$aos-easing: (
+  ease-in-out: cubic-bezier(.420, 0, .580, 1)
+);
+
+[data-aos] {
+  @for $i from 1 through 60 {
+    body[data-aos-duration='#{$i * 50}'] &,
+    &[data-aos][data-aos-duration='#{$i * 50}'] {
+      transition-duration: #{$i * 50}ms;
+    }
+
+    body[data-aos-delay='#{$i * 50}'] &,
+    &[data-aos][data-aos-delay='#{$i * 50}'] {
+      transition-delay: 0;
+
+      &.aos-animate {
+        transition-delay: #{$i * 50}ms;
+      }
+    }
+  }
+
+  @each $key, $val in $aos-easing {
+    body[data-aos-easing="#{$key}"] &,
+    &[data-aos][data-aos-easing="#{$key}"] {
+      transition-timing-function: $val;
+    }
+  }
 }
 
-//----------------------------------------------
-// Animation Helper
-//---------------------------------------------- 
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+[data-aos="fade-in"] {
+  opacity: 0;
+  transition-property: opacity;
+
+  &.aos-animate {
+    opacity: 1;
+  }
 }
 
-.fade-in {
-  animation-name: fade-in;
-}
+[data-aos="fade-in-up"] {
+  opacity: 0; 
+  transform: translate3d(0, 100%, 0);
+  transition-property: opacity, transform;
 
-.fade-in-up {
-  animation-name: fade-in-up;
+  &.aos-animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
