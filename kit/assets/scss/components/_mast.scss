@@ -3,7 +3,7 @@
 //----------------------------------------------
 .mast {
   position: relative;
-  // z-index: $z-998;
+  z-index: $z-998;
 
   height: 26em;
   width: 100%;
@@ -15,7 +15,7 @@
   & > * {
 
     @media (min-width: $mq-small) {
-      animation: fade-in ease-in-out 1s both 1s;
+      animation: fade-in ease-in-out 1s both 2s;
     }
   }
 

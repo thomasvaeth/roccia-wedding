@@ -40,23 +40,16 @@ $(function() {
   });
 
   // Spanizer
-  $('.section-header').each(function() {
-    var arr = $(this).html().split(''),
-        newArr = [];
-    arr.forEach(function(letter) {
-      if (letter !== ' ') {
-        newArr.push('<span>' + letter + '</span>');
-      } else {
-        newArr.push('<span>&nbsp;</span>');
-      }
-    });
-    newArr = newArr.join('');
-    $(this).html(newArr);
-  });
+  // $('.section-header').each(function() {
+  //   var arr = $(this).html().split(' '),
+  //       newArr = [];
+  //   arr.forEach(function(letter) {
+  //     newArr.push('<span>' + letter + '</span>');
+  //   });
+  //   $(this).html(newArr.join(' '));
+  // });
 
   // Inits
-  var rellax = new Rellax('.rellax');
-
   AOS.init({
     duration: 1000,
     easing: 'ease-in-out',

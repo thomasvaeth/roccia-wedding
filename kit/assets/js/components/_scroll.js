@@ -23,7 +23,7 @@
           'scrollTop': $target.offset().top - offset
         }, {
           // Duration
-          duration: 600,
+          duration: 1000,
           // Easing
           easing: 'easeInExpo',
           // Complete Callback
