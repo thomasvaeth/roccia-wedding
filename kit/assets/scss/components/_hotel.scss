@@ -32,14 +32,14 @@
     @extend .map__address;
   }
 
-  // &__info {
-  //   @extend %auto-margin;
+  &__info {
+    @extend %auto-margin;
 
-  //   width: 75%;
-  //   margin-bottom: 0;
+    width: 75%;
+    margin-bottom: 0.5em;
 
-  //   font-style: italic;
-  // }
+    font-style: italic;
+  }
 
   &__reservation {
     @include link-underline();
